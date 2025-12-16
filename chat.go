@@ -6,19 +6,22 @@ import (
 
 var Foodlist=map[string]int{
 
-	"burger":100,
+"burger":100,
 "toast":100,
 "Cola":100,
 "Fanta":100,
 }
 
-
+var foodOrder string
+var foodAmount int 
+var drinkOrder string
+ var drinkAmount int 
 
 func  FdOrder(x string,a int)int{
  amount:=a
-result:=Foodlist[x]
 
-	return result-amount
+return Foodlist[x]-amount
+	
 }
 
 
@@ -27,26 +30,42 @@ result:=Foodlist[x]
 
 func main(){
 
-var foodOrder string
-var foodAmount int 
+
 //var drinkOrder int
  //var drinkAmount int 
  
 fmt.Printf("Welcome to :Original Taste")
-fmt.Printf("Order menu: \n Foods: 1.Burger 2.Toast \n")
+fmt.Printf("Order menu: \nFoods: 1.Burger 2.Toast \n")
 fmt.Scan(&foodOrder)
-fmt.Printf("How many?")
+fmt.Printf("How many? \n")
 fmt.Scan(&foodAmount)
-//fmt.Println("Drinks: 1.Cola 2.Fanta")
-//fmt.Scan(&drinkOrder)
-//fmt.Printf("How many?")
-//fmt.Scan(&drinkAmount)
-//fmt.Println(Foodlist)
+fmt.Println("Drinks: 1.Cola 2.Fanta")
+fmt.Scan(&drinkOrder)
+fmt.Printf("How many?")
+fmt.Scan(&drinkAmount)
+fmt.Println(Foodlist)
 
-result:=FdOrder(foodOrder,foodAmount)
+food:=FdOrder(foodOrder,foodAmount)
+Foodlist[foodOrder]=food
+fmt.Println(food)
+fmt.Printf( "Foodlist[%s]=%d",foodOrder,Foodlist[foodOrder]) 
 
-fmt.Println(result)
+
+drink:=FdOrder(drinkOrder,drinkAmount)
+Foodlist[foodOrder]=drink
+fmt.Println(drink)
+fmt.Printf( "Foodlist[%s]=%d",drinkOrder,Foodlist[foodOrder]) 
 
 
 
+
+
+
+
+//order,ok:=Foodlist[foodOrder]
+//if ok{
+//return order
+//}
+//Foodlist["burger"]=Foodlist["burger"]-foodAmount //this works
+//fmt.Println(Foodlist["burger"])
 }

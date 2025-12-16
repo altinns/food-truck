@@ -3,3 +3,9 @@ food truck
 stock food
 order
 time
+
+
+
+aadd transactions  cash or debit 
+opens at 7 am closes at 5
+we'll think of other features
