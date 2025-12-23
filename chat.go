@@ -47,18 +47,18 @@ fmt.Println(Foodlist)
 
 food:=FdOrder(foodOrder,foodAmount)
 Foodlist[foodOrder]=food
-fmt.Println(food)
+// fmt.Println(food)
 fmt.Printf( "Foodlist[%s]=%d",foodOrder,Foodlist[foodOrder]) 
 
 
 drink:=FdOrder(drinkOrder,drinkAmount)
-Foodlist[foodOrder]=drink
-fmt.Println(drink)
-fmt.Printf( "Foodlist[%s]=%d",drinkOrder,Foodlist[foodOrder]) 
+Foodlist[drinkOrder]=drink
+//fmt.Println(drink)
+fmt.Printf( "Foodlist[%s]=%d",drinkOrder,Foodlist)
 
 
 
-
+fmt.Printf(Foodlist)
 
 
 
